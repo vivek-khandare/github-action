@@ -11,3 +11,5 @@ public class BankappApplication {
 	}
 
 }
+
+//mvn package
