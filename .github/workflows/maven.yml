@@ -87,6 +87,13 @@ jobs:
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         SONAR_HOST_URL: ${{ vars.SONAR_HOST_URL }}
+
+    - name: Debug SONAR_HOST_URL
+      run: |
+       echo "Length of SONAR_HOST_URL: ${#SONAR_HOST_URL}"
+       echo "SONAR_HOST_URL starts with: ${SONAR_HOST_URL:0:10}"
+      env:
+        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         
     - name: SonarQube Quality Gate check
       id: sonarqube-quality-gate-check
