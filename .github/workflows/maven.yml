@@ -133,12 +133,6 @@ jobs:
         push: true
         tags: vivek7296/bankapp:latest
         file: ./Dockerfile
-
-    - name: Verify kubectl config
-      run: |
-       kubectl config current-context
-       kubectl cluster-info
-       kubectl get nodes
         
   deploy_to_kubernetes:
     runs-on: self-hosted
